@@ -1,0 +1,23 @@
+[user]
+	name = Qianqian Shi
+	email = qshi@yahoo-inc.com
+[alias]
+	dag = log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	autocrlf = input
+[diff]
+    compactionheuristic = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[push]
+	default = current
+[merge]
+	conflictstyle = diff3
+[branch]
+	autosetuprebase = always
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
